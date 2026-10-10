@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aisyah Nurul Izzah | Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14121f;--panel:#1e1b2e;--line:#322d4a;--text:#f1eefb;--muted:#a59fc0;--accent:#ff8fb1;--accent2:#8be3d0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Figtree,system-ui,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+nav{position:sticky;top:12px;z-index:5;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;width:max-content;max-width:calc(100% - 24px);margin:12px auto 0;padding:8px 10px;background:rgba(30,27,46,.88);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px}
+nav a{text-decoration:none;font-size:.9rem;padding:6px 14px;border-radius:999px;color:var(--muted)}
+nav a:hover{color:var(--text);background:var(--line)}
+section{max-width:960px;margin:0 auto;padding:88px 24px}
+.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(3rem,11vw,7.5rem);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{color:var(--accent)}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.15rem;margin-top:24px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chip{border:1px solid var(--line);background:var(--panel);padding:6px 14px;border-radius:999px;font-size:.9rem}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:32px}
+.about{display:grid;gap:32px;grid-template-columns:1fr 1fr}
+.about p{color:var(--muted);max-width:60ch}
+dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+dt{color:var(--muted)}dd{font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.skill{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.skill:nth-child(odd){border-radius:18px 18px 4px 18px}
+.skill h3{font-size:1.25rem;margin-bottom:6px;color:var(--accent2)}
+.skill p{color:var(--muted);font-size:.95rem}
+.ach{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px 18px 18px 6px;padding:28px}
+.ach .year{color:var(--accent);font-weight:600}
+.ach h3{font-size:1.5rem;margin:6px 0 4px}
+.ach .org{color:var(--muted);margin-bottom:12px}
+.ach p{max-width:62ch}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.4rem,8vw,5rem)}
+.contact p{color:var(--muted);max-width:46ch;margin:0 auto 28px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600;border:1px solid var(--line);background:var(--panel)}
+.btn.primary{background:var(--accent);color:#2a1020;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:32px 24px;border-top:1px solid var(--line)}
+@media(max-width:700px){.about{grid-template-columns:1fr}section{padding:64px 20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.btn{transition:transform .15s}
+</style>
+</head>
+<body>
+<nav aria-label="Navigasi utama">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#skills">What I Can Do</a><a href="#achievement">Achievement</a><a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h1>Aisyah<br>Nurul <span>Izzah</span></h1>
+  <p>Mahasiswa baru Pendidikan Teknologi Informasi yang suka memecahkan masalah, mengutak-atik teknologi, dan belajar lewat robotika.</p>
+  <div class="meta"><span class="chip">Pendidikan Teknologi Informasi</span><span class="chip">Robotika</span><span class="chip">Programming</span></div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about">
+    <div>
+      <p>Saya Aisyah, mahasiswa baru Pendidikan Teknologi Informasi yang penasaran dengan cara kerja teknologi. Saya mulai mengenal dunia pemrograman dan robotika lewat kompetisi, dan sekarang ingin mengembangkan kemampuan itu di bangku kuliah.</p>
+      <p style="margin-top:14px">Saya senang mencari solusi dari masalah yang rumit dan terus mencoba hal baru.</p>
+    </div>
+    <dl>
+      <dt>Nama</dt><dd>Aisyah Nurul Izzah</dd>
+      <dt>NIM</dt><dd>26050974109</dd>
+      <dt>Prodi</dt><dd>Pendidikan Teknologi Informasi</dd>
+      <dt>Pendidikan</dt><dd>Mahasiswa S1 Pendidikan Teknologi Informasi</dd>
+      <dt>Aktivitas</dt><dd>Kuliah, belajar pemrograman, mengikuti kompetisi robotika</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>What I Can Do</h2>
+  <div class="skills">
+    <div class="skill"><h3>Editing</h3><p>Mengolah dan merapikan konten visual maupun dokumen.</p></div>
+    <div class="skill"><h3>Problem Solving</h3><p>Menguraikan masalah dan mencari solusi yang efektif.</p></div>
+    <div class="skill"><h3>Programming</h3><p>Menulis kode untuk membangun program dan mengendalikan robot.</p></div>
+    <div class="skill"><h3>Curiosity &amp; Tech-Savvy</h3><p>Cepat belajar dan nyaman mencoba teknologi baru.</p></div>
+  </div>
+</section>
+
+<section id="achievement">
+  <h2>Achievement</h2>
+  <article class="ach">
+    <span class="year">2025</span>
+    <h3>Peserta RRO &amp; WRO</h3>
+    <div class="org">Robokidz Robot Olympiad (RRO) dan World Robot Olympiad (WRO) tingkat SMA/Sederajat, di Institut Teknologi Sepuluh Nopember (ITS)</div>
+    <p>Berpartisipasi dalam dua kompetisi robotika tingkat SMA/sederajat, mengasah kerja tim, pemrograman, dan pemecahan masalah di bawah tekanan waktu.</p>
+  </article>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Mari terhubung</h2>
+  <p>Terbuka untuk berkenalan, berdiskusi, atau berkolaborasi di bidang teknologi dan robotika.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://www.linkedin.com/in/aisyah-nur
