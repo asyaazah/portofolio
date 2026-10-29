@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aisyah Nurul Izzah | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14121f;--panel:#1e1b2e;--line:#322d4a;--text:#f1eefb;--muted:#a59fc0;--accent:#ff8fb1;--accent2:#8be3d0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Figtree,system-ui,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+nav{position:sticky;top:12px;z-index:5;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;width:max-content;max-width:calc(100% - 24px);margin:12px auto 0;padding:8px 10px;background:rgba(30,27,46,.88);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px}
+nav a{text-decoration:none;font-size:.9rem;padding:6px 14px;border-radius:999px;color:var(--muted)}
+nav a:hover{color:var(--text);background:var(--line)}
+section{max-width:960px;margin:0 auto;padding:88px 24px}
+.hero{min-height:82vh;display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:end;padding-bottom:0}
+.hero-text{align-self:center;padding-bottom:64px}
+.hero h1{font-size:clamp(2.8rem,8vw,5rem);font-weight:800;letter-spacing:-.03em}
+.hero-photo{width:100%;max-width:320px;justify-self:end;display:block;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.hero h1{color:#fff}
+.hero h1 span{color:#fff}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.15rem;margin-top:24px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chip{border:1px solid var(--line);background:var(--panel);padding:6px 14px;border-radius:999px;font-size:.9rem}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:32px}
+.about{display:grid;gap:32px;grid-template-columns:1fr 1fr}
+.about p{color:var(--muted);max-width:60ch}
+dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+dt{color:var(--muted)}dd{font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.skill{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.skill:nth-child(odd){border-radius:18px 18px 4px 18px}
+.skill h3{font-size:1.25rem;margin-bottom:6px;color:var(--accent2)}
+.skill p{color:var(--muted);font-size:.95rem}
+.ach{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px 18px 18px 6px;padding:28px}
+.ach .year{color:var(--accent);font-weight:600}
+.ach h3{font-size:1.5rem;margin:6px 0 4px}
+.ach .org{color:var(--muted);margin-bottom:12px}
+.ach p{max-width:62ch}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.4rem,8vw,5rem)}
+.contact p{color:var(--muted);max-width:46ch;margin:0 auto 28px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600;border:1px solid var(--line);background:var(--panel)}
+.btn svg{width:20px;height:20px}.btn svg.f{fill:currentColor}
+.btn.li{background:#0a66c2;color:#fff;border-color:#0a66c2}
+.btn.gh{background:#f1eefb;color:#14121f;border-color:#f1eefb}
+.btn.em{background:var(--accent);color:#2a1020;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+h2 small{display:block;font-family:Figtree,sans-serif;font-size:1rem;font-weight:400;color:var(--muted);margin-top:10px;max-width:56ch;line-height:1.5}
+.gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px}
+.gallery figure{flex:0 0 auto;scroll-snap-align:start}
+.gallery button{display:block;padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);cursor:zoom-in}
+.gallery img{display:block;height:360px;width:auto}
+.gallery figcaption{color:var(--muted);font-size:.85rem;margin-top:8px;max-width:240px}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.docs img{width:100%;border-radius:12px;display:block}
+.docs figcaption{color:var(--muted);font-size:.8rem;margin-top:6px}
+dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:16px;padding:12px;max-width:min(92vw,900px)}
+dialog::backdrop{background:rgba(10,8,18,.85)}
+dialog img{display:block;max-width:100%;max-height:80vh;margin:0 auto;border-radius:10px}
+dialog p{text-align:center;color:var(--muted);margin-top:8px;font-size:.9rem}
+.skill .ic{width:42px;height:42px;border-radius:12px;background:var(--line);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tool{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 12px 4px 4px;font-size:.82rem}
+.tool i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.65rem;font-weight:700;color:#fff}
+.docs video{width:100%;border-radius:12px;display:block;background:#000}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:32px 24px;border-top:1px solid var(--line)}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.hero-text{padding-bottom:0}.hero-photo{justify-self:center;max-width:260px}.about{grid-template-columns:1fr}section{padding:64px 20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.btn{transition:transform .15s}
+</style>
+</head>
+<body>
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#skills">What I Can Do</a><a href="#achievement">Achievement</a><a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+  <h1>Aisyah<br>Nurul <span>Izzah</span></h1>
+  <p>First-year Information Technology Education student who loves solving problems, tinkering with technology, and learning through robotics.</p>
+  <div class="meta"><span class="chip">Editing</span><span class="chip">Programming</span><span class="chip">Web Dev</span></div>
+  </div>
+  <img class="hero-photo" src="images/foto.png" alt="Photo of Aisyah Nurul Izzah" width="405" height="615">
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about">
+    <div>
+      <p>I am Aisyah, a first-year Information Technology Education student who is curious about how technology works. I discovered programming and robotics through competitions, and now I want to grow those skills at university.</p>
+      <p style="margin-top:14px">I enjoy finding solutions to tricky problems and always trying new things.</p>
+    </div>
+    <dl>
+      <dt>Name</dt><dd>Aisyah Nurul Izzah</dd>
+      <dt>Student ID</dt><dd>26050974109</dd>
+      <dt>Study Program</dt><dd>Information Technology Education</dd>
+      <dt>Education</dt><dd>Universitas Negeri Surabaya</dd>
+      <dt>Activities</dt><dd>Studying, learning programming, joining robotics competitions</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Work Gallery<small>My moodboard and visual editing work. I have also tried coding for the web and building simple games. Click an image to enlarge it, and scroll sideways to see more.</small></h2>
+  <div class="gallery">
+    <figure><button type="button" data-cap="Moodboard 1"><img src="images/karya-1.jpg" alt="Moodboard 1" loading="lazy"></button><figcaption>Moodboard 1</figcaption></figure>
+    <figure><button type="button" data-cap="Couple Moodboard 1"><img src="images/karya-2.jpg" alt="Couple Moodboard 1" loading="lazy"></button><figcaption>Couple Moodboard 1</figcaption></figure>
+    <figure><button type="button" data-cap="Couple Moodboard 2"><img src="images/karya-3.jpg" alt="Couple Moodboard 2" loading="lazy"></button><figcaption>Couple Moodboard 2</figcaption></figure>
+    <figure><button type="button" data-cap="Moodboard 2"><img src="images/karya-4.jpg" alt="Moodboard 2" loading="lazy"></button><figcaption>Moodboard 2</figcaption></figure>
+    <figure><button type="button" data-cap="Moodboard 3"><img src="images/karya-5.jpg" alt="Moodboard 3" loading="lazy"></button><figcaption>Moodboard 3</figcaption></figure>
+    <figure><button type="button" data-cap="Moodboard 4"><img src="images/karya-6.jpg" alt="Moodboard 4" loading="lazy"></button><figcaption>Moodboard 4</figcaption></figure>
+    <figure><button type="button" data-cap="Moodboard 5"><img src="images/karya-7.jpg" alt="Moodboard 5" loading="lazy"></button><figcaption>Moodboard 5</figcaption></figure>
+    <figure><button type="button" data-cap="Moodboard 6"><img src="images/karya-8.jpg" alt="Moodboard 6" loading="lazy"></button><figcaption>Moodboard 6</figcaption></figure>
+    <figure><button type="button" data-cap="Moodboard 7"><img src="images/karya-9.jpg" alt="Moodboard 7" loading="lazy"></button><figcaption>Moodboard 7</figcaption></figure>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>What I Can Do</h2>
+  <div class="skills">
+    <div class="skill"><div class="ic" aria-hidden="true">🎬</div><h3>Editing</h3><p>Editing moodboards, storyboards, and simple videos.</p><div class="tools"><span class="tool"><i style="background:#000;border:1px solid #666">CC</i>CapCut</span><span class="tool"><i style="background:linear-gradient(135deg,#00c4cc,#7d2ae8)">C</i>Canva</span><span class="tool"><i style="background:#1f6fb5">iP</i>Ibis Paint</span></div></div>
+    <div class="skill"><div class="ic" aria-hidden="true">🧩</div><h3>Problem Solving</h3><p>Breaking problems down and finding effective solutions.</p></div>
+    <div class="skill"><div class="ic" aria-hidden="true">💻</div><h3>Programming</h3><p>Writing code for robots, websites, and simple games.</p><div class="tools"><span class="tool"><i style="background:#007acc">VS</i>VS Code</span><span class="tool"><i style="background:#2f9e8f">W</i>Wokwi</span><span class="tool"><i style="background:#3776ab">🐢</i>Python Turtle</span><span class="tool"><i style="background:#44a833">A</i>Anaconda</span></div></div>
+    <div class="skill"><div class="ic" aria-hidden="true">🔍</div><h3>Curiosity &amp; Tech-Savvy</h3><p>A fast learner who is comfortable trying new technology.</p></div>
+  </div>
+</section>
+
+<section id="achievement">
+  <h2>Achievement</h2>
+  <article class="ach">
+    <span class="year">2025</span>
+    <h3>RRO &amp; WRO Participant</h3>
+    <div class="org">Robokidz Robot Olympiad (RRO) and World Robot Olympiad (WRO), senior high school level, at Institut Teknologi Sepuluh Nopember (ITS)</div>
+    <p>Took part in two robotics competitions at the senior high school level, building teamwork, programming, and problem-solving skills under time pressure.</p>
+    <div class="docs">
+      <figure><img src="images/lomba-1.jpg" alt="World Robot Olympiad Indonesia 2025 at ITS" loading="lazy"><figcaption>World Robot Olympiad Indonesia 2025, Robotics Center Building, ITS, 22-24 August 2025</figcaption></figure>
+      <figure><img src="images/lomba-2.jpg" alt="Participants preparing robots at the competition arena" loading="lazy"><figcaption>Preparing robots at the competition arena</figcaption></figure>
+      <figure><video controls preload="metadata" playsinline poster="videos/lomba-video-1.jpg"><source src="videos/lomba-video-1.mp4" type="video/mp4"></video><figcaption>Competition video 1</figcaption></figure>
+      <figure><video controls preload="metadata" playsinline poster="videos/lomba-video-2.jpg"><source src="videos/lomba-video-2.mp4" type="video/mp4"></video><figcaption>Competition video 2</figcaption></figure>
+    </div>
+  </article>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Let's connect</h2>
+  <p>Open to meeting new people, sharing ideas, or collaborating on technology and robotics.</p>
+  <div class="btns">
+    <a class="btn li" href="https://www.linkedin.com/in/aisyah-nurul-b1b103441" target="_blank" rel="noopener"><svg class="f" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+    <a class="btn gh" href="https://github.com/asyaazah" target="_blank" rel="noopener"><svg class="f" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
+    <a class="btn em" href="mailto:26050974109@mhs.unesa.ac.id"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email</a>
+  </div>
+</section>
+
+<footer>&copy; 2026 Aisyah Nurul Izzah. All rights reserved.</footer>
+<dialog id="lb" aria-label="Image preview"><img alt=""><p></p></dialog>
+<script>
+var lb=document.getElementById('lb');
+document.querySelectorAll('.gallery button').forEach(function(b){b.addEventListener('click',function(){
+  var i=b.querySelector('img');lb.querySelector('img').src=i.src;lb.querySelector('img').alt=i.alt;lb.querySelector('p').textContent=b.dataset.cap;lb.showModal();});});
+lb.addEventListener('click',function(){lb.close();});
+</script>
+</body>
+</html>
